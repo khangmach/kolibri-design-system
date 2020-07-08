@@ -22,7 +22,7 @@
     <slot v-if="$slots.default"></slot>
 
     <template v-else>
-      <span>{{ text }}</span>
+      <span class="link-text">{{ text }}</span>
     </template>
 
     <!-- iconAfter may come by slot or by prop -->
@@ -106,9 +106,9 @@
     },
     computed: {
       iconColor() {
-        return this.appearance === 'raised-button' ?
-          this.$themeTokens.textInverted :
-          this.$themeTokens.primary;
+        return this.appearance === 'raised-button'
+          ? this.$themeTokens.textInverted
+          : this.$themeTokens.primary;
       },
       htmlTag() {
         // Necessary to allow basic links to be rendered as 'inline' instead of
