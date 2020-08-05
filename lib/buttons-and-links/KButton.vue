@@ -17,6 +17,7 @@
       v-if="icon" 
       :icon="icon" 
       :color="iconColor"
+      class="prop-icon"
     />
 
     <slot v-if="$slots.default"></slot>
@@ -31,6 +32,7 @@
       v-if="iconAfter" 
       :icon="iconAfter"
       :color="iconColor"
+      class="prop-icon"
     />
 
     <!-- Dropdown arrow icon -->
@@ -106,9 +108,13 @@
     },
     computed: {
       iconColor() {
-        return this.appearance === 'raised-button'
-          ? this.$themeTokens.textInverted
-          : this.$themeTokens.primary;
+        if (this.primary) {
+          return this.appearance === 'raised-button'
+            ? this.$themeTokens.textInverted
+            : this.$themeTokens.primary;
+        } else {
+          return this.$themeTokens.text;
+        }
       },
       htmlTag() {
         // Necessary to allow basic links to be rendered as 'inline' instead of
@@ -163,6 +169,10 @@
   .dropdown-arrow {
     position: relative;
     top: 6px;
+  }
+
+  .prop-icon {
+    top: 3px;
   }
 
 </style>

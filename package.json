@@ -1,6 +1,6 @@
 {
   "name": "kolibri-design-system",
-  "version": "0.2.0-beta5",
+  "version": "0.2.0-beta6",
   "private": false,
   "description": "The Kolibri Design System defines common design patterns and code for use in Kolibri applications",
   "license": "MIT",
@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "npm-run-all --parallel _dev-only _lint-watch-fix _pregenerate-watch pregenerate",
     "generate": "yarn run pregenerate && nuxt generate",
-    "lint": "kolibri-tools lint '**/*.{js,vue,scss,less,css}' -i ,'**/node_modules/**','**/.nuxt/**','**/dist/**','**/lib/KIcon/precompiled-icons/**','**/lib/keen/**','**/docs/gitBranch.js','**/docs/jsdocs.js'",
+    "lint": "kolibri-tools lint '**/*.{js,vue,scss,less,css}' -i ,'**/node_modules/**','**/.nuxt/**','**/dist/**','**/lib/KIcon/precompiled-icons/**','**/lib/keen/**','**/docs/environment.js','**/docs/jsdocs.js'",
     "lint-fix": "yarn lint -w",
     "lint-watch": "yarn lint -m",
     "pregenerate": "node utils/pregenerate.js",

@@ -63,16 +63,9 @@ export default [
     ],
   }),
   new Section({
-    title: 'Design patterns',
+    title: 'Foundation',
+    autoSort: true,
     pages: [
-      new Page({
-        path: '/writing',
-        title: 'Writing',
-      }),
-      new Page({
-        path: '/inclusive',
-        title: 'Inclusive design',
-      }),
       new Page({
         path: '/colors',
         title: 'Colors and themes',
@@ -82,32 +75,55 @@ export default [
         title: 'Icons',
       }),
       new Page({
-        path: '/layout',
-        title: 'Layout and grids',
-        disabled: true,
+        path: '/inclusive',
+        title: 'Inclusive design',
       }),
+      new Page({
+        path: '/layout',
+        title: 'Layout',
+      }),
+      new Page({
+        path: '/writing',
+        title: 'Writing',
+      }),
+    ],
+  }),
+  new Section({
+    title: 'Patterns',
+    autoSort: true,
+    pages: [
       new Page({
         path: '/forms',
         title: 'Forms',
         disabled: true,
       }),
+    ],
+  }),
+  new Section({
+    title: 'Components',
+    autoSort: true,
+    pages: [
       new Page({
         path: '/buttons',
         title: 'Buttons and links',
       }),
       new Page({
-        path: '/modals',
-        title: 'Modals',
-        disabled: true,
-      }),
-      new Page({
         path: '/loaders',
         title: 'Loaders',
+      }),
+      new Page({
+        path: '/modals',
+        title: 'Modals',
+      }),
+      new Page({
+        path: '/snackbars',
+        title: 'Snackbars',
       }),
     ],
   }),
   new Section({
     title: 'Code library docs',
+    autoSort: true,
     pages: [
       new Page({
         path: '/library',
@@ -179,7 +195,6 @@ export default [
         path: '/KRadioButton',
         title: 'KRadioButton',
         isCode: true,
-        disabled: true,
       }),
       new Page({
         path: '/KTooltip',
@@ -227,7 +242,6 @@ export default [
         path: '/KSwitch',
         title: 'KSwitch',
         isCode: true,
-        disabled: true,
       }),
       new Page({
         path: '/KButton',
